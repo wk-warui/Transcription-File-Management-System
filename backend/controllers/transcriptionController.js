@@ -5,7 +5,7 @@ const path = require('path');
 
 exports.uploadFile = async (req, res) => {
   try {
-    const file = req.files.file;  // Assume you're using express-fileupload
+    const file = req.files.file;
     const uploadPath = path.join(__dirname, '../uploads/', file.name);
     
     await file.mv(uploadPath);

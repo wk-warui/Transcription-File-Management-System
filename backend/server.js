@@ -3,7 +3,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const bodyParser = require('body-parser');
-const authRoutes = require('./routes/authRoutes'); // Adjust path as necessary
+const authRoutes = require('./routes/authRoutes');
 const fileRoutes = require('./routes/fileRoutes'); // For file management routes
 const multer = require('multer'); // For handling file uploads
 const path = require('path');
@@ -66,4 +66,3 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
-

@@ -1,6 +1,5 @@
 const path = require('path');
 
-// Stream the file
 exports.playFile = (req, res) => {
     const fileName = req.params.fileName;
     const filePath = path.join(__dirname, '../uploads', fileName);

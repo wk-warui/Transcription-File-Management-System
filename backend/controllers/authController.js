@@ -1,9 +1,9 @@
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const User = require('../models/User'); // Assuming you have a User model.
+const User = require('../models/User');
 const SECRET_KEY = process.env.JWT_SECRET || "yoursecretkey"; // JWT secret
 
-// Register user
+// Registerion user
 exports.register = async (req, res) => {
     try {
         const { username, password } = req.body;
@@ -38,7 +38,6 @@ exports.login = async (req, res) => {
         const isMatch = await bcrypt.compare(password, user.password);
         if (!isMatch) return res.status(400).json({ message: 'Invalid username or password' });
 
-        // If successful, return a JWT token
         const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, { expiresIn: '1h' });
         res.status(200).json({ token, message: 'Login successful' });
     } catch (error) {

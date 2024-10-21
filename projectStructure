@@ -1,0 +1,26 @@
+transcription-system/
+├── backend/
+│   ├── config/
+│   │   └── db.js
+│   ├── controllers/
+│   │   ├── authController.js
+│   │   ├── transcriptionController.js
+│   ├── middleware/
+│   │   └── authMiddleware.js
+│   ├── models/
+│   │   ├── User.js
+│   │   └── File.js
+│   ├── routes/
+│   │   ├── authRoutes.js
+│   │   └── fileRoutes.js
+│   ├── utils/
+│   │   └── googleSpeech.js
+│   └── server.js
+└── frontend/
+    ├── public/
+    └── src/
+        ├── components/
+        ├── pages/
+        ├── services/
+        └── App.js
+
